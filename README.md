@@ -4,17 +4,20 @@ The template holds the HTML markup for image, email, phone and address as well a
 Shadow DOM is used for encapsulating styles and markup in the template.
 The class and name of the custom element are identity-card and userCard respectively.
 
-For using the custom element in HTML, 
-1. Attach the script and give source to usercard.js in the HTML file just above the closing body tag.
-2. Custom element with tag <identity-card></identity-card> can be used inside body.
-3. The attributes of the element are strings for different properties as follows:
+## For using the custom element in HTML, 
+## 1. Attach the script and give source to usercard.js in the HTML file just above the closing body tag.
+        <script src="usercard.js"></script>
+## 2. Custom element with tag <identity-card></identity-card> can be used inside body.
+
+
+## The different attributes for the element can be used as follows:
     a. name: String value for the name of person in identity-card
     b. image: string value for the url or the directory of the image of the user.
     c. email: String value for the email of user.
     d. address: string value of the address of the user.
     e. phone: string value for the phone number.
     
-4. The example of the identity card is as follows:
+# The example of the identity card is as follows:
 
     <identity-card
         name="Minion Bob"
