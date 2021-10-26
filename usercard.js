@@ -2,6 +2,10 @@
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
+*{
+    padding: 0px;
+
+}
     .user-card {
         font-family: 'Arial', sans-serif;
         background: #f4f4f4;
