@@ -63,11 +63,11 @@ class userCard extends HTMLElement{
 
         shadow.appendChild(template.content.cloneNode(true));
 
-        shadow.querySelector('h3').innerText = this.getAttribute('name');
-        shadow.querySelector('.email').innerText = this.getAttribute('email');
-        shadow.querySelector('.phone').innerText = this.getAttribute('phone');
+        
+        /* shadow.querySelector('.email').innerText = this.getAttribute('email'); */
+        /* shadow.querySelector('.phone').innerText = this.getAttribute('phone');
         shadow.querySelector('.address').innerText = this.getAttribute('address');
-        shadow.querySelector('img').src = this.getAttribute('image');
+        shadow.querySelector('img').src = this.getAttribute('image'); */
 
     }
     toggleInfo() {
@@ -88,9 +88,15 @@ class userCard extends HTMLElement{
 
     //for button we place it in connected callback
     connectedCallback() {
+        this.shadowRoot.querySelector('h3').innerText = this.getAttribute('name');
+        this.shadowRoot.querySelector('.email').innerText = this.getAttribute('email');
+        this.shadowRoot.querySelector('.phone').innerText = this.getAttribute('phone');
+        this.shadowRoot.querySelector('.address').innerText = this.getAttribute('address');
+        this.shadowRoot.querySelector('img').src = this.getAttribute('image');
         this.shadowRoot.querySelector('#toggle-info').
         addEventListener('click', () =>this.toggleInfo());
     }
+    
 
     disconnectedCallback() {
         this.shadowRoot.querySelector('#toggle-info').
